@@ -1,0 +1,82 @@
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 15px;
+}
+
+h1{
+    font-size: 30px;
+    color: white;
+}
+
+#md{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    width: 40%;
+    height: 100%;
+    
+}
+
+#md-area{
+    height: 80%;
+    border: none;
+    border-radius: 0px;
+    text-align: start;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    border: rgb(71, 0, 130) solid 5px;
+}
+
+#md-area:focus{
+    outline: none !important;
+}
+
+#html{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+}
+
+#html-area{
+    height: 80%;
+    border: none;
+    background-color: white;
+    margin: 0px;
+    overflow-y: scroll;
+    text-align: start;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    border: rgb(186, 33, 33) solid 5px;
+
+}
+
+#button-clip, #button-save{
+    margin-top: 5px;
+    height: 30px;
+    font-weight: bold;
+    background-color: rgb(186, 33, 33) ;
+    border: none;
+    width: 150px;
+    align-self: center;
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#button-clip:focus{
+    outline: none !important;
+}
+
+#button-clip:hover{
+    cursor: pointer;
+}
