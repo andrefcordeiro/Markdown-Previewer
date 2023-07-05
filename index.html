@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
     <div id="container">
         <div id="md">
             <h1 id="title"> MARKDOWN </h1>
-            <textarea id="md-area" placeholder="insira o código em markdown" onkeyup="output(this.value)"></textarea>
+            <textarea id="md-area" placeholder="Insira o código em markdown" onkeyup="output(this.value)"></textarea>
         </div>
 
         <div id="html">
@@ -27,12 +28,6 @@
                 <button id="button-clip" onclick="copyToClipboard('html-area')"> Save to clipboard </button>
                 <a href="#" id="button-save" onclick="saveHTML('html-area')"> Save as html </a>
             </div>
-
-
-            <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-            <script>
-            </script>
-
         </div>
     </div>
 

@@ -1,12 +1,19 @@
-/* função altera o html da div de id=html-area de acordo com o codigo markdown passado por parametro   */
-function output(value) {
+/* 
 
+função altera o html da div de id=html-area de acordo com o codigo markdown passado por parametro   
+
+*/
+function output(value) {
     localStorage.setItem('markdown-text', value) /* salva o codigo markdown no localStorage*/
-    let toHtml = marked(value)
+    let toHtml = marked.parse(value, {headerIds: false, mangle: false})
     document.getElementById('html-area').innerHTML = DOMPurify.sanitize(toHtml, { USE_PROFILES: { html: true } });
 }
 
-/* função que salva no clipboard o texto do elemento <p> passado por parametro  */
+/* 
+
+função que salva no clipboard o texto do elemento <p> passado por parametro  
+
+*/
 function copyToClipboard(element) {
     let e = document.getElementById(element);
     console.log(e)
@@ -14,7 +21,11 @@ function copyToClipboard(element) {
     navigator.clipboard.writeText(elementText);
 }
 
-/* faz download do html do elemento com id=elementId */
+/* 
+
+faz download do html do elemento com id=elementId 
+
+*/
 function saveHTML(elementId) {
     let e = document.getElementById(elementId).innerHTML;
     console.log(e)
@@ -26,9 +37,13 @@ function saveHTML(elementId) {
 
 }
 
-/* quando a page é renderizada */
+/* 
+
+quando a page é renderizada 
+
+*/
 window.onload = function () {
-    let markdown_text = localStorage.getItem("markdown-text") /* recupera o codigo markdown do localStorage*/
+    let markdown_text = localStorage.getItem("markdown-text") /* recupera o codigo markdown do localStorage */
     document.getElementById("md-area").innerHTML = markdown_text /* "seta" a text area com o texto recuperado */
     output(markdown_text) /* passando o markdown para html */
 };
